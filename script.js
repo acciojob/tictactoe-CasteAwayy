@@ -50,7 +50,7 @@ const inputSection = document.getElementById('input-section');
             messageElement.textContent = "It's a Draw";
           }else{
             currentPlayerIndex = 1 - currentPlayerIndex;
-            messageElement.textContent = `${players[currentPlayerIndex]}, you're up`
+            messageElement.textContent = `Player${[currentPlayerIndex+1]}, you're up`
           }
         }
 
