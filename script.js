@@ -50,7 +50,7 @@ const inputSection = document.getElementById('input-section');
             messageElement.textContent = "It's a Draw";
           }else{
             currentPlayerIndex = 1 - currentPlayerIndex;
-            messageElement.textContent = `Player${[currentPlayerIndex+1]}, you're up`
+            messageElement.textContent = `${players[currentPlayerIndex]}, you're up`
           }
         }
 
@@ -73,7 +73,7 @@ const inputSection = document.getElementById('input-section');
           currentPlayerIndex = 0;
           inputSection.style.display = 'none';
           gameSection.style.display = 'block';
-          
+          messageElement.textContent = `${players[0]}, you're up`;
           createBoard();
           
         })
