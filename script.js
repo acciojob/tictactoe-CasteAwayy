@@ -38,14 +38,14 @@ const inputSection = document.getElementById('input-section');
           if(board[index] || checkWinner()) return;
           
           if(currentPlayerIndex === 0){
-            board[index] = 'X';
+            board[index] = 'x';
           }else{
-            board[index] = 'O';
+            board[index] = 'o';
           }
           
           document.getElementById(index).textContent = board[index];
           if(checkWinner()){
-            messageElement.textContent = `${players[currentPlayerIndex]}, congratulations you won!`;
+            messageElement.textContent = `${players[currentPlayerIndex]} congratulations you won!`;
           }else if(board.every(cell=>cell)){
             messageElement.textContent = "It's a Draw";
           }else{
@@ -56,7 +56,7 @@ const inputSection = document.getElementById('input-section');
 
         function checkWinner(){
           return winningCombinations.some(combination=>
-          combination.every(index => board[index] === (currentPlayerIndex === 0 ? 'X' : 'O'))
+          combination.every(index => board[index] === (currentPlayerIndex === 0 ? 'x' : 'o'))
           );
         }
 
