@@ -27,7 +27,7 @@ const inputSection = document.getElementById('input-section');
           boardElement.innerHTML = '';
           for(let i = 0; i < 9; i++){
             const cell = document.createElement('div');
-            cell.id = i;
+            cell.id = Number(i);
             cell.addEventListener('click', () => handleCellClick(i));
             boardElement.appendChild(cell);
           }
