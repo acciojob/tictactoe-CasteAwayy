@@ -45,12 +45,12 @@ const inputSection = document.getElementById('input-section');
           
           document.getElementById(index).textContent = board[index];
           if(checkWinner()){
-            messageElement.textContent = `${players[currentPlayerIndex]}, Congrats you won !`;
+            messageElement.textContent = `${players[currentPlayerIndex]}, congratulations you won!`;
           }else if(board.every(cell=>cell)){
             messageElement.textContent = "It's a Draw";
           }else{
             currentPlayerIndex = 1 - currentPlayerIndex;
-            messageElement.textContent = `${players[currentPlayerIndex]}, You are up !`
+            messageElement.textContent = `${players[currentPlayerIndex]}, you're up`
           }
         }
 
